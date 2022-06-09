@@ -1,0 +1,41 @@
+.movie-list{display: flex;flex-wrap: wrap; width: 80%; margin: auto;}
+
+
+.imgbox{position: relative; margin: 10px 15px;}
+.imgbox img{border-radius: 5px; width: 200px; height: auto;}
+
+.gradeinfo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; right: 20px;
+}
+
+.gradeinfo.on12 {background-color: skyblue;}
+
+.gradeinfo.onall {background-color: rgb(91,199,126);}
+
+.gradeinfo.on15 {background-color: rgb(255, 184, 30);}
+
+.txtbox{text-align: center  ; font-size: 12px;}
+.txtbox .title{font-size: 14px; font-weight: bold; padding-bottom: 5px; width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: auto;}
+
+
+.info{position: relative;}
+.txtbox .rateinfo{margin-right: 15px;}
+.rateinfo::after{content: ' '; border-left: 1px solid rgba(129, 129, 129, 0.933);  height: 10px;position: absolute; top: 50%; transform: translateY(-50%); left: 47%;}
+
+.dimmed{background-color: rgba(0, 0, 0, 0.5); padding-top: 286px; position: absolute; top: 0; left: 0;width: 200px; display: none; pointer-events: none; }
+.dimmed li{position: absolute; top: 40% ; transform: translate(-50%);display: flex; flex-direction: column;align-items: center; left: 50%; transform: translateX(-50%); cursor: pointer; ;}
+
+.dimmed a{text-decoration: none; color: #fff; font-weight: bold; border: 1px solid #fff; width: 150px;border-radius: 5px; height: 26px; text-align: center;margin-top: 10px; display: block;  }
+
+
+.imgbox img:hover ~ .dimmed{display: block;}
+

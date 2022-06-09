@@ -1,7 +1,20 @@
 import React from 'react';
 import './css/index.css';
+import userData from './userData.json'
 
 const MainFeed = () => {
+
+    const MainFeed = () => {
+        const users = userData.map((item) => {
+          return (
+            <li className="friend" key={item.id}>
+              <div className="profile-image"></div>
+              <div className="nickname">{item.username}</div>
+            </li>
+          );
+        });
+    }          
+
     return (
         <div className='mainFeed'>
             <div className="wrapper">
