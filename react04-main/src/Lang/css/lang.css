@@ -1,0 +1,14 @@
+
+.lang-box{ width: 100px; margin: auto; color: #888;}
+
+.lang-box.active{display: block;}
+.lang-box.unactive{display: none;}
+
+.lang-list {
+
+    width: 100px;
+    margin: 30px auto 0;
+    justify-content: space-between;
+    border: 1px solid black;
+
+}

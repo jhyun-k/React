@@ -1,0 +1,6 @@
+.item-imgbox img{border-radius: 8px;width: 100%;}
+
+.item-infobox{padding-top: 14px; overflow: hidden; height: 70px; word-break: keep-all; width: 230px;}
+.item-infobox .info-title{display: block; font-size: 16px; line-height: 22px;padding-right: 10px; text-overflow: ellipsis; text-align: center;}
+.item-infobox .info-company{display: block; font-size: 13px; color: #888; padding-top: 10px; text-align: center;}
+
