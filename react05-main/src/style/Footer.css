@@ -1,0 +1,8 @@
+#footerArea{
+    width: 100%; height: 40px;
+    background-color: rgb(164, 89, 70);
+    text-align: center;
+    line-height: 40px;
+}
+
+#footerArea h2{color: #fff; font-size: 2rem;}
