@@ -13,7 +13,7 @@ const Card = ({card})  => {
 
    const fncFav = (e) => {
     setFav((fav === 0) ? 1 : 0) ; 
-    setCheckState(e.target.value)
+    setCheckState(e.target.checked);
     console.log(checkState);
    }
 

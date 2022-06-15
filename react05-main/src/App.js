@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header title={title} />
       <Main />
-      <ProductTab />
+      <ProductTabcopy />
       <Tab />
       <Footer title={title} />
     </div>
