@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<style>
+    .box {
+        border: 3px solid black;
+    }
+
+    .one {
+        width: 600px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+
+        const box = document.querySelector('.box')
+
+        
+
+        const data = ['./jsonData-1.json','/jsonData-2.json','/jsonData-3.json','jsonData-4.json']
+        const mkElement = (num) =>{
+            let mkDiv = document.createElement('div') // 새로 div 하나 만들고  
+                    mkDiv.setAttribute('class', 'one') // 만든 div에 class 속성 적용
+                    mkDiv.innerText = num;
+                    box.append(mkDiv)
+        }
+
+        //axios js 라이브러리 - ie 호환 크로싱 브라우징, 제이슨 자동으로 변환
+        // promise와 fetch 구형 부라우저에 대한 호환성이 없다
+        // promise와 fetch 폴리필이 안된다, 낮출 수 있는 방법이 없다.
+
+        (async () =>{
+        await axios(data[0]).then(()=>{mkElement('1')})
+        await axios(data[1]).then(()=>{mkElement('2')})
+        await axios(data[2]).then(()=>{mkElement('3')})
+        await axios(data[3]).then(()=>{mkElement('4')})})()
+        
+        //axios 사용하려면 라이브러리 다운받고 시작해야함 
+      
+            
+    </script>
+</body>
+
+</html>

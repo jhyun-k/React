@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 3px solid black;
+    }
+
+    .one {
+        width: 600px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        /*   const fnc1 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    //실행문 실행문
+                    resolve('작업이 종료되었습니다. 그 다음 작업을 수행해도 됩니다.')
+                }, 1000)
+            })
+        }
+        console.log(fnc1);
+        // (1) -> (2) -> (3) -> ...
+        fnc1() // (1)
+        .then(()=>{
+
+        })
+        .then(()=>{
+
+        }) */
+        // ()-> ()-> () 하려면 맨 처음 promise 함수가 있어야함 처음엔 꼭 new Promise 넣어줘야해 넘길거 없으면 resolve만 넘겨도 ㄱㅊ
+        const box = document.querySelector('.box')
+
+        /* const fnc = () => {
+            return new Promise((resolve) => {
+                resolve();
+                reject();
+            })
+        } */
+
+        const data = ['./jsonData-1.json','/jsonData-2.json','/jsonData-3.json','jsonData-4.json']
+        const mkElement = (num) =>{
+            let mkDiv = document.createElement('div') // 새로 div 하나 만들고  
+                    mkDiv.setAttribute('class', 'one') // 만든 div에 class 속성 적용
+                    mkDiv.innerText = num;
+                    box.append(mkDiv)
+        }
+        // 바로 실행할 함수이므로 즉시시행으로 시행할 수있다
+        (async () =>{
+        await fetch(data[0]).then(()=>{mkElement('1')})
+        await fetch(data[1]).then(()=>{mkElement('2')})
+        await fetch(data[2]).then(()=>{mkElement('3')})
+        await fetch(data[3]).then(()=>{mkElement('4')})})()
+        
+
+        //async await
+        // await 진행중인 구문이 끝날 때 까지 기다리게 하는 구문
+        //await 감싸는 함수에서 async 붙여야한다
+        //async함수 앞에 붙여서 비동기도 돌아가게 해준다
+        //async/await 은 익스 등 오래된 브라우저에서 사용 못함
+        
+            
+    </script>
+</body>
+
+</html>

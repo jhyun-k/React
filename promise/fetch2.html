@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 2px solid green;
+    }
+
+    .list {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>테스트1</h1>
+    <div class="box">
+
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+
+        fetch('./listData.html')
+            .then((response) => {
+                return response.text();
+            })
+            .then((data) => {
+                let list = document.createElement('div') // 새로 div 하나 만들고  
+                list.setAttribute('class', 'list') // 만든 div에 class 속성 적용
+                list.innerHTML = data;
+                box.append(list)
+            }).catch((error)=>{
+                console.log('땡!');
+            })
+    </script>
+</body>
+
+</html>
