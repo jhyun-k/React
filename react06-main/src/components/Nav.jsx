@@ -1,10 +1,12 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
 const Nav = () => {
     const navList = [
-        {content:'Main',href:''},
-        {content:'Review',href:'Review'},
-        {content:'CardList',href:'CardList'},
+        {content:'Main',href:'/'},
+        {content:'Notice',href:'notice'},
+        {content:'CardList',href:'cardList'},
+        {content : 'Event', href : 'event'}
     ]
     return (
     
@@ -14,7 +16,7 @@ const Nav = () => {
                 {
                 navList.map((element,index)=>{
                     return(
-                    <li key={index}>{element.content}</li>
+                    <li key={index}><NavLink to={element.href}>{element.content}</NavLink></li>
                     )
                 })
                     

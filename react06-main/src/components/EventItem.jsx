@@ -1,0 +1,19 @@
+import React from 'react';
+import EventStyle from '../style/event.module.css'
+import {Link} from 'react-router-dom'
+
+const EventItem = ({data,index}) => {
+    return (
+            <li>
+                    <div className={EventStyle.num}>{index+1}</div>
+                    <div className={EventStyle.imgBox}><img src={data.image} alt=''/></div>
+                    <dl className={EventStyle.des}>
+                        <dt>{data.first_name}</dt>
+                        <dd>{data.email}</dd>
+                        <dd><Link to = "#">자세히보기</Link></dd>
+                    </dl>   
+                </li>
+    );
+};
+
+export default EventItem;
