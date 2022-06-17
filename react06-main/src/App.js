@@ -7,6 +7,8 @@ import CardList from './components/CardList';
 import Notice from './components/Notice';
 import Event from './components/Event'
 import {Manual, Policy, Rule, Info} from './pages/FooterMenu'
+import Form from './components/Form';
+import ProgramList from './components/ProgramList';
 
 //Routes 감싸주는 아이 Route 그 안에 내부에 들어가는 아이 
 //npm i react-router-dom
@@ -26,6 +28,9 @@ function App() {
           <Route path='/rule' element={<Rule />} />
           <Route path='/info' element={<Info />} />
           <Route path='/event' element={<Event />} />
+          <Route path='/form' element={<Form />} />
+          <Route path='/program' element={<ProgramList />} />
+
         </Routes>
         <Footer title={title} />
       </BrowserRouter>

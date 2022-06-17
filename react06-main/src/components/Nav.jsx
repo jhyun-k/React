@@ -6,7 +6,10 @@ const Nav = () => {
         {content:'Main',href:'/'},
         {content:'Notice',href:'notice'},
         {content:'CardList',href:'cardList'},
-        {content : 'Event', href : 'event'}
+        {content : 'Event', href : 'event'},
+        {content : 'Form', href : 'form'},
+        {content : 'Program', href : 'program'}
+
     ]
     return (
     

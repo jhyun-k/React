@@ -3,8 +3,11 @@
     height: auto;
     margin :50px auto;
 }
+.mainContainer h2{color: #f93; font-size: 2rem; padding-bottom: 2rem;}
+
 .mainContainer .slideBtn{
     border-bottom: 1px solid #777;
+    position: absolute; left: 6rem; top: 9.2rem;
 }
 .mainContainer .slideBtn button{
     padding: 0.5rem 1rem;
@@ -16,7 +19,7 @@
 .mainContainer .viewContents{
     margin: auto;
     width: var(--list-size);
-    border: 1px solid #999;
+    /* border: 1px solid #999; */
     overflow: hidden;
 }
 
@@ -29,13 +32,13 @@
 }
 
 .mainContainer .viewContents ul li{
-    flex-shrink: 1;
+    flex-shrink: 0;
     width: var(--list-size);
     height: 500px;
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
     display: none;
-}
+    padding: 50px;}
 
 .mainContainer .viewContents li.on{display: block; color: rgb(79, 54, 106); }
 

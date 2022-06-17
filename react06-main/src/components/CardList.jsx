@@ -3,26 +3,29 @@ import React from 'react';
 import Card from './Card';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import '../style/container.css'
+
+
 
 const CardList = () => {
 
     const [cardData,setCardData] = useState([]); 
 
-    const dataUrl = './data/cardData.json'   
-    useEffect(()=>{
+    const dataUrl = './data/cardData.json';
+
+  /*   useEffect(()=>{
          axios.get(dataUrl)
         .then(response => response.data)
         .then(data=>setCardData(data))
         .catch(error=>{console.log(error);})
-    },[])
+    },[]) */
 
     useEffect(()=>{
-       const fnc = async()=>{
-            const res = await axios.get(dataUrl);
-            setCardData(res.data);
-        }
-        fnc()
-    })
+       (async()=>{
+            const response = await axios.get(dataUrl);
+            setCardData(response.data);
+        })();
+    },[]);
     
     /* const [cardData,setCardData] = useState([]);    
     useEffect(()=>{

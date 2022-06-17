@@ -1,6 +1,7 @@
 import React from 'react';
 import {MdFavorite} from "react-icons/md";
 import { useState } from 'react';
+import '../style/container.css'
 
 const Card = ({card})  => {
    const favListColor = [ {color:'#ddd'},  {color:'#F20'}]
