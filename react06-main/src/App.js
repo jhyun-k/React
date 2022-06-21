@@ -9,6 +9,7 @@ import Event from './components/Event'
 import {Manual, Policy, Rule, Info} from './pages/FooterMenu'
 import Form from './components/Form';
 import ProgramList from './components/ProgramList';
+import Detail from './components/Detail';
 
 //Routes 감싸주는 아이 Route 그 안에 내부에 들어가는 아이 
 //npm i react-router-dom
@@ -30,6 +31,7 @@ function App() {
           <Route path='/event' element={<Event />} />
           <Route path='/form' element={<Form />} />
           <Route path='/program' element={<ProgramList />} />
+          <Route path='cardList/detail:id' element={<Detail />} />
 
         </Routes>
         <Footer title={title} />

@@ -2,6 +2,7 @@
     width: 100%; height: auto;
     display: flex; flex-wrap: wrap;margin: 20px;
 }
+.programList.on{display: none;}
 
 .programList ul{display: flex;}
 .programList img {width: 210px; height: 118px;border-radius: 10px; }
@@ -9,3 +10,17 @@
 .programDes{ width: 210px;margin: 30px;}
 .programDes h2{font-weight: bold; font-size: 16px;}
 .programDes h3{text-overflow: ellipsis;white-space: nowrap; overflow: hidden;}
+
+.moreBtn{
+    width: 2rem; height: 2rem;
+    margin: auto; display: block;
+}
+
+.moreBtn svg{
+    width: 2rem; height: 3rem;
+}
+
+.programList.on{display: none;}
+
+.colorChange{color: red;}
+.colorChange.on{color: blue;}

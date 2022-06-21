@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react'
-import  productData  from '../../../db/productData.json';
+import  productData  from '../productData.json';
 import TabUl from './TabUl';
 
 const Tab = (props) => {

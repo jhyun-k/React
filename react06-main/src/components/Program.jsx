@@ -9,7 +9,7 @@ const Program = ({data}) => {
 
     return (
         <div>
-            <div className='programList'>
+            <div>
                 <img src={data.image} alt="" />
             </div>
             <div className='programDes'>
