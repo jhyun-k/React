@@ -17,7 +17,6 @@ const Detail = (card) => {
          })();
      },[]);
      console.log(cardData);
-    //  const viewData = cardData.filter(function(ele,index){return index===1})
     return (
         <div>
             <h3>CardList</h3>
