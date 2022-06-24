@@ -2,7 +2,7 @@ import React from 'react';
 import {MdFavorite} from "react-icons/md";
 import { useState } from 'react';
 import '../style/container.css'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Card = ({card})  => {
    const favListColor = [ {color:'#ddd'},  {color:'#F20'}]
@@ -18,7 +18,6 @@ const Card = ({card})  => {
     setCheckState(e.target.checked);
     console.log(checkState);
    }
-   const detailPage = {content : 'detail' ,href : `detail${card.id}`}
 
     return (
         <li>
@@ -35,7 +34,7 @@ const Card = ({card})  => {
             좋아요
             <MdFavorite style={favListColor[fav]} />
            </label>
-           <NavLink to={detailPage.href}>상세보기</NavLink>
+           <Link to={`/detail/${card.id}`}>상세보기</Link>
        </div>
      </li>
     );

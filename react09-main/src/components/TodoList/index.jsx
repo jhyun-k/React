@@ -15,7 +15,7 @@ const TodoList = ({todos,selectedTodoIndex,setSelectedTodoIndex,deleteTodo}) => 
                             deleteTodo(index);
                             e.preventDefault();
                             e.stopPropagation();
-                        }
+                        }   
                     }
                     >
                         {todo.title}

@@ -5,7 +5,7 @@ import TodoTitleArea from './components/TodoTitleArea'
 import { setItem,getItem } from './lib/storage';
 import debounce from 'lodash.debounce';
 
-const debounceSetItem = debounce(setItem,6000)
+const debounceSetItem = debounce(setItem,2000)
 
 function App() {
   const [todos,setTodos] = useState(getItem('todo')||[])
@@ -23,7 +23,7 @@ function App() {
     const newTodos = [
       ...todos,
       {
-        title:'😊Untitled',
+        title:'',
         content:''
       }
     ]

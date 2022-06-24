@@ -7,7 +7,7 @@
     background-color: rgb(255, 158, 60);
     border-bottom:1px solid #333;
 }
-h1{
+.header_h1{
     width: 100px;
     height: 80px;
     font-size: 2rem;

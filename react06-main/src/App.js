@@ -11,7 +11,6 @@ import Form from './components/Form';
 import ProgramList from './components/ProgramList';
 import Detail from './components/Detail';
 import { useState,useEffect } from 'react';
-import axios from 'axios';
 
 //Routes 감싸주는 아이 Route 그 안에 내부에 들어가는 아이 
 //npm i react-router-dom
@@ -19,16 +18,15 @@ import axios from 'axios';
 function App() {
   const title = 'site';
 
-    const dataUrl = './data/cardData.json';
 
     const [cardData,setCardData] = useState([]);    
     useEffect(()=>{
-        fetch('../data/cardData.json')
+        fetch(`http://localhost:3000/data/cardData.json`)
         .then(response => response.json())
-        .then(data=>setCardData(data))
+        .then(cardData=>setCardData(cardData))
         .catch(error=>{console.log(error);})
     },[])
-
+    console.log(cardData);
   return (
     <div className="App">
       <BrowserRouter>
@@ -44,7 +42,7 @@ function App() {
           <Route path='/event' element={<Event />} />
           <Route path='/form' element={<Form />} />
           <Route path='/program' element={<ProgramList />} />
-          <Route path='cardList/detail/:id' element={<Detail  detail={} />} />
+          <Route path='/detail/:id' element={<Detail cardData={cardData} title={title}/>} />
 
         </Routes>
         <Footer title={title} />

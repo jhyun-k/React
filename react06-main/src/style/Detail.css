@@ -1,1 +1,5 @@
-h2{color: #000;}
+.detail{margin: 1rem;border: 3px solid orange;}
+.detailHead{font-size: 2rem; margin: 1rem;text-align: center;}
+.detail .title{color: #000;font-size: 1rem;margin: 1rem; text-align: center;}
+.imgbox{text-align: center;}
+.content{text-align: center; font-size: 1rem; margin: 1rem;}

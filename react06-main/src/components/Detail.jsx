@@ -1,34 +1,17 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
-import axios from 'axios'
-import Card from './Card';
 import '../style/Detail.css'
+import { useParams } from 'react-router-dom';
 
-const Detail = (card) => {
+const Detail = (props) => {
+    const {id} = useParams();
 
-    const [cardData,setCardData] = useState([]); 
-
-    const dataUrl = '../data/cardData.json';
-
-    useEffect(()=>{
-        (async()=>{
-             const response = await axios.get(dataUrl);
-             setCardData(response.data);
-         })();
-     },[]);
-     console.log(cardData);
     return (
-        <div>
-            <h3>CardList</h3>
-            <ul className='card_wrap'>
-                {
-                    cardData.map((card,index)=>
-                        <li key={card.id} card={card}><img src={card.imgUrl} alt="" /></li>
-                        
-                    )
-                }
-            </ul>
-            
+        <div className='detail'>
+            <h3 className='detailHead'>Detail info</h3>
+            <h1 className='title'>{props.cardData[id-1].title}</h1>
+            <p className='imgbox'><img src={props.cardData[id-1].imgUrl} alt="" /></p>
+            <h3 className='content'>{props.cardData[id-1].content}</h3>
+           
             
 
             
