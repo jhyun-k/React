@@ -19,7 +19,8 @@ function ProductTab () {
     return (
         <div className='prodcut-tab'>
             <div className='tab-btn'>
-                {tabData.map((data,index)=>
+                {
+                tabData.map((data,index)=>
                 <button className={num+1===data.id?'btn active':'btn'} key={data.id} onClick = {(e)=>{fncTab(e,index)}}>{data.brand}</button>)/*클릭한 탭에 색 넣기 조건 : num===index 도 가능*/
                 }
             </div>

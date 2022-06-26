@@ -6,7 +6,7 @@ import TabUl from './TabUl';
 const Tab = (props) => {
     const tabData = productData;
     const [dataIndex,setDataIndex] = useState(0);
-    const handleTab = (e,index) =>{     
+    const handleTab = (e,index) => {
         e.preventDefault();
         setDataIndex(index);
         console.log(dataIndex);

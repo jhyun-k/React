@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import ProductTab from './components/ProductTab';
 
 function App() {
   return (
     <div className="App">
-      <h1>안녕하세요</h1>
+      <ProductTab />
     </div>
   );
 }
