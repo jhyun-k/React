@@ -2,5 +2,7 @@
 
 **markdown bold**
 
-```sorce code ```
+```source code ```
+
+`small source code`
 
