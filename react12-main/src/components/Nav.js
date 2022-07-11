@@ -1,11 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import "./Nav.css";
-import { useSelector } from 'react-redux/es/exports';
+import { useSelector,useDispatch } from 'react-redux/es/exports';
+import { logout } from '../store/user/userSlice';
+
+
 
 const Nav = () => {
 
     const cart = useSelector(state=>state.cart)
+    const user = useSelector((state)=> state.user.value)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     return (
         <nav className="nav">
             <span className="nav-title"><Link to='/'>SHOP</Link></span>
@@ -16,6 +22,10 @@ const Nav = () => {
                     </i>
                 </Link>
             </span>
+            {
+                user? (<span className='user' onClick={()=>{dispatch(logout(false))}}>로그아웃</span>) : 
+                (<span className='user' onClick={()=> navigate('/login')}>로그인</span>)
+            }
         </nav>
     );
 };

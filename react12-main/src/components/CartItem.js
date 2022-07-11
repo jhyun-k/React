@@ -6,14 +6,11 @@ import { deleteCart } from '../store/cart/cartSlice';
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch();
-    const cart = useSelector(state=>state.cart)
-    const restItems = cart.filter((ele, index) => {
-     let indexNum;
-     if(ele.id===item.id) {
-        indexNum=index;
-     }
-        return indexNum
-    })
+    const cart = useSelector(state=>state.cart);
+
+    const restItems = cart.filter((ele, index) =>  // filter은 배열을 return
+        ele.id === item.id )
+    
     
     return (
         <div className="cart-item">
