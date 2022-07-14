@@ -17,6 +17,7 @@ const ProductDetail = () => {
     useEffect(()=>{
         getDetailData();
     },[])
+    
     return (
         <div>
           <div>

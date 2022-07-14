@@ -1,10 +1,6 @@
 {
   "list": [
     {
-      "id": 1,
-      "content": "html"
-    },
-    {
       "id": 2,
       "content": "css"
     },
@@ -13,7 +9,7 @@
       "content": "js"
     },
     {
-      "content": "안녕하세요",
+      "content": "crud",
       "id": 4
     }
   ]
