@@ -15,7 +15,7 @@ const VideoList = () => {
         <ul className='videoList VideoGrid'>
             {
                 videoData.map((item , idx) => (
-                    <VideoItem key={item.snippet.thumbnails.default.url} item={item.snippet} />           
+                    <VideoItem key={item.snippet.thumbnails.default.url} item={item.snippet} value={item} />           
                 ))
             }
            

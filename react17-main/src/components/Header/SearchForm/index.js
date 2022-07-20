@@ -3,15 +3,17 @@ import './index.css';
 import {useRef,useEffect} from 'react';
 import { useDispatch } from 'react-redux/';
 import { getVideoList } from '../../../store/video/videoSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 const SearchForm = () => {
     const dispatch = useDispatch();
     const inputRef=useRef();
-    
+    const navigate = useNavigate()
     const onSearch = (input) => {
         const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${input}&type=video&key=AIzaSyCUVEvzmfL7VLqdE9HGQ82PGiZUJCm2itY`
         dispatch(getVideoList(url))
+        navigate('/')
     }
 
     const onSubmit = (e) => {
