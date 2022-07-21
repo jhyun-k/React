@@ -37,3 +37,29 @@
     color: #fff;
     font-size: 0.7rem;
 }
+
+.videoItemList{
+    display: flex;
+    width: 100%;
+}
+.videoRowList .videoItem{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+.videoRowList .videoItemGrid{
+    display: flex;
+    flex: 1 1 50%;
+    max-width: 50%;
+    background-color: var(--color-dark-gray);
+    background-clip: content-box;
+}
+.videoRowList .thumbnail-img{
+    flex: 1 1 30%;
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+}
+.videoRowList .descriptionBox{
+    padding: 0.2rem;
+    flex:1 1 70%;
+    color: var(--color-light-gray);
+}
