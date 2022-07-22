@@ -1,10 +1,10 @@
 import React from 'react';
 import VideoList from './../components/VideoList';
 import SideMenu from '../components/SideMenu';
-import { useSelector } from 'react-redux';
+import {useSelector} from "react-redux";
 
-const search = () => {
-  const display = useSelector((state) => state.video.listayout);
+const Search = () => {
+    const display = useSelector((state) => state.video.listLayout);
     return (
         <>
           <SideMenu  /> 
@@ -15,4 +15,4 @@ const search = () => {
     );
 };
 
-export default search; 
+export default Search;

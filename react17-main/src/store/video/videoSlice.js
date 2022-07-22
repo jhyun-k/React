@@ -20,10 +20,10 @@ const videoSlice =  createSlice({
         data:[],
         listLayout:'grid',
     },
-    reducers: { 
+    reducers: {  
         videoListLayout:(state,action) => {
             state.listLayout=action.payload
-        } 
+        }
     },
     extraReducers:(builder)=>{
         builder.addCase(getVideoList.fulfilled,(state,action)=>{
@@ -33,4 +33,5 @@ const videoSlice =  createSlice({
     }
 })
 
+export const { videoListLayout } = videoSlice.actions
 export default videoSlice.reducer
