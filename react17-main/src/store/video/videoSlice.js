@@ -13,6 +13,18 @@ export const getVideoList = createAsyncThunk(
     }
 )
 
+export const getChannelInfo = createAsyncThunk(
+    "GET_CHANNEL_INFO",
+    async (url) => {
+        try{
+            const res = await axios.get(url)
+            return res.data.items
+        }catch(err){
+            console.log(err)
+        }
+    }
+)
+
 
 const videoSlice =  createSlice({
     name:'video',
@@ -36,6 +48,10 @@ const videoSlice =  createSlice({
         })
         builder.addCase(getVideoList.rejected,(state,action)=>{
             state.loading=true;
+        })
+        builder.addCase(getChannelInfo.fulfilled,(state,action)=>{
+            console.log('비디오채널정보',action.payload);
+            state.channel=action.payload;
         })
     }
 })

@@ -21,3 +21,13 @@ iframe{
     height: 200px; /* 수정 */
     background-color:var(--color-gray); 
 }
+
+.channel-data{
+    margin-left:0.6rem;
+}
+.channel-data .channel-title{
+    font-size: 0.6rem;
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+
+}
