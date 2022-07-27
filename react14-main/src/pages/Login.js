@@ -14,11 +14,11 @@ const Login = ({setAuth}) => {
              <form onSubmit={(e)=>{login(e)}}>
                 <div>
                     <div><label htmlFor='userId'>아이디</label></div>
-                    <div><input type="text" id="userId"  placeholder='Email aadress' autoComplete='off' /></div>
+                    <div><input type="text" id="userId"  placeholder='Email aadress' autoComplete='off' required /></div>
                 </div>
                 <div>
                     <div><label htmlFor='userPass'>비밀번호</label></div>
-                    <div><input type="password"  id="userPass" autoComplete='off' placeholder='pw입력'/></div>
+                    <div><input type="password"  id="userPass" autoComplete='off' placeholder='pw입력' required /></div>
                 </div>
                 <div>
                    <input type="submit" value="로그인" />
